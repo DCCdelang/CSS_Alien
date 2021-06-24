@@ -1,0 +1,3 @@
+number of repetitive active clusters: 1
+
+cluster 1: 10 exemplars

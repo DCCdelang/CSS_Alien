@@ -1,0 +1,21 @@
+number of repetitive active clusters: 19
+
+cluster 1: 52 exemplars
+cluster 2: 45 exemplars
+cluster 3: 43 exemplars
+cluster 4: 29 exemplars
+cluster 5: 25 exemplars
+cluster 6: 21 exemplars
+cluster 7: 5 exemplars
+cluster 8: 4 exemplars
+cluster 9: 3 exemplars
+cluster 10: 3 exemplars
+cluster 11: 3 exemplars
+cluster 12: 3 exemplars
+cluster 13: 2 exemplars
+cluster 14: 2 exemplars
+cluster 15: 2 exemplars
+cluster 16: 2 exemplars
+cluster 17: 2 exemplars
+cluster 18: 2 exemplars
+cluster 19: 2 exemplars

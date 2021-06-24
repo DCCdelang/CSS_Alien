@@ -1,0 +1,6 @@
+number of repetitive active clusters: 4
+
+cluster 1: 8 exemplars
+cluster 2: 4 exemplars
+cluster 3: 3 exemplars
+cluster 4: 2 exemplars
