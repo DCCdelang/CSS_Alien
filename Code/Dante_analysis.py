@@ -2,18 +2,19 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import re
-import filecmp
 import os, os.path
 import glob
 
-data = pd.read_csv("Project/CSS_Alien/Pattern_data/OTS_2_Default_2/general_data.csv")
+data = pd.read_csv("Project/CSS_Alien/Pattern_data/OTS_2_Default_4/General data.csv")
 
-data.columns=["time step", "number of clusters", "number of clusters with tokens", "number of cells", "number of particles", "number of tokens", "total internal energy", "total kinetic energy"]
+data.columns=["time step", "number of clusters", "number of clusters with tokens", 
+"number of cells", "number of particles", "number of tokens", "total internal energy", "total kinetic energy"]
 
-# plt.plot(data["time step"],data["number of clusters with tokens"])
-# plt.show()
-
-
+plt.plot(data["time step"]/1000,data["number of clusters with tokens"])
+plt.ylabel("Number of active clusters")
+plt.xlabel("Iterations x 1000")
+plt.savefig("Project/CSS_Alien/Plots/active_clusters.png",dpi=300)
+plt.show()
 
 def data_from_text(path):
     text = open(path,"r").read()
@@ -21,15 +22,12 @@ def data_from_text(path):
     numbers = numbers[2:]
     return numbers
     
-
-# data_from_text(path)
-
-path = "Project/CSS_Alien/Pattern_data/OTS_2_Default_2/"
+path = "Project/CSS_Alien/Pattern_data/OTS_2_Default_4/"
 all_data = []
 total_data = []
 biggest_data = []
 sum_data = []
-for i in range(15):
+for i in range(31):
     subdata = data_from_text(path+str(i*5)+"/result.txt")
     all_data.append(subdata)
     biggest_data.append(subdata[0][1])
@@ -39,20 +37,25 @@ for i in range(15):
         sum += values[1]
     sum_data.append(sum)
 
-# print(all_data)
-# print(total_data)
+x = np.linspace(0,150,31)
 
-# plt.plot(total_data)
-# plt.ylabel("Number of species")
-# plt.show()
+plt.plot(x,total_data)
+plt.ylabel("Number of species")
+plt.xlabel("Iterations x 1000")
+plt.savefig("Project/CSS_Alien/Plots/num_species.png",dpi=300)
+plt.show()
 
-# plt.plot(biggest_data)
-# plt.ylabel("amount in biggest group")
-# plt.show()
+plt.plot(x,biggest_data)
+plt.ylabel("Size of ruling species")
+plt.xlabel("Iterations x 1000")
+plt.savefig("Project/CSS_Alien/Plots/num_ruling.png",dpi=300)
+plt.show()
 
-# plt.plot(np.array(biggest_data)/np.array(sum_data))
-# plt.ylabel("fraction biggest to all")
-# plt.show()
+plt.plot(x,np.array(biggest_data)/np.array(sum_data))
+plt.ylabel("Fraction size largest group of total")
+plt.xlabel("Iterations x 1000")
+plt.savefig("Project/CSS_Alien/Plots/fraction_species.png",dpi=300)
+plt.show()
 
 path1 = "Project/CSS_Alien/Pattern_data/OTS_2_Default_2/15"
 path2 = "Project/CSS_Alien/Pattern_data/OTS_2_Default_2/10"
@@ -69,16 +72,13 @@ def compare_cols(path1, path2):
             if os.stat(file1).st_size == os.stat(file2).st_size:
                 couples.append([i,j])
             
-    # print(couples)
     return couples
 
 # compare_cols(path1, path2)
 
 def delete_double_cols(path):
     num_cols1 = len(glob.glob1(path,"*.col"))
-    subdata = data_from_text(path+"/result.txt")
-    # print(subdata)
-    
+    subdata = data_from_text(path+"/result.txt")    
     labelled_data = []
 
     for i in range(0,num_cols1):
@@ -98,7 +98,6 @@ def delete_double_cols(path):
 
             filtered.append([labelled_data[i][0],sum])
                 
-    # print(filtered)
     return filtered
 
 # delete_double_cols(path)
@@ -108,23 +107,10 @@ def make_table():
     table = []
     for step in range(0,15):
         path1 = path+str(step*5)
-        # path2 = path+str((step+1)*5)
-        # mapping = compare_cols(path1, path2)
         filtered = delete_double_cols(path1)
         table.append(filtered)
-        # subdata1 = data_from_text(path1+"/result.txt")
-        # subdata2 = data_from_text(path2+"/result.txt")
-        # print(mapping)
-        # print(subdata1)
-        # print(subdata2)
-        # print("NEXT")
     print(table)
-
-    whole_table = []
-    for time in table:
-        
-
 
     return
 
-make_table()
+# make_table()
