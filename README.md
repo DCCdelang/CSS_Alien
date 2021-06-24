@@ -10,7 +10,7 @@ The [Pattern_data](https://github.com/DCCdelang/CSS_Alien/tree/main/Pattern_data
 
 In the [Collections](https://github.com/DCCdelang/CSS_Alien/tree/main/Collections) and the [Simulations](https://github.com/DCCdelang/CSS_Alien/tree/main/Simulations) folder some configurations are found in order to run the simulations. Most data was created using the setup-OTS-02.sim simulations file with the Default parameter settings.
 
-<img src="Plots\Additional_Media\OTS_2_Default_start.PNG" alt="OTS_2_Default_start" style="zoom:25%;" /><img src="Plots\Additional_Media\OTS_2_Default_30k.PNG" alt="OTS_2_Default_30k" style="zoom:24%;" /><img src="Plots\Additional_Media\OTS_2_Default_104k.PNG" alt="OTS_2_Default_30k" style="zoom:26%;" />
+<img src="Plots\Additional_Media\OTS_2_Default_start.PNG" alt="OTS_2_Default_start" style="width:25%;hight:25%;" /><img src="Plots\Additional_Media\OTS_2_Default_30k.PNG" alt="OTS_2_Default_30k" style="width:24%;hight:24%;" /><img src="Plots\Additional_Media\OTS_2_Default_104k.PNG" alt="OTS_2_Default_30k" style="width:26%;hight:26%;" />
 
 In the above three images snapshots are shown of the setup-OTS-02.sim file with default parameters. The first file is at iteration=0 followed by a snapshot of iter=30k and iter=104k. While the simulation is initialized with only 10 small replicators it is very interesting to see how, in a nutrition rich environment, it is able to fully take over the simulation space. At 30k almost all food is converted and at 104k different clusters are emerging each consisting of different mutation of the original replicator. 
 
