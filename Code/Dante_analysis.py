@@ -11,8 +11,9 @@ data.columns=["time step", "number of clusters", "number of clusters with tokens
 "number of cells", "number of particles", "number of tokens", "total internal energy", "total kinetic energy"]
 
 plt.plot(data["time step"]/1000,data["number of clusters with tokens"])
-plt.ylabel("Number of active clusters")
-plt.xlabel("Iterations x 1000")
+plt.title("Active clusters")
+plt.ylabel("Number of clusters")
+plt.xlabel("Time step")
 plt.savefig("Project/CSS_Alien/Plots/active_clusters.png",dpi=300)
 plt.show()
 
@@ -40,19 +41,22 @@ for i in range(31):
 x = np.linspace(0,150,31)
 
 plt.plot(x,total_data)
-plt.ylabel("Number of species")
+plt.title("Repetitive clusters")
+plt.ylabel("Number of partitions")
 plt.xlabel("Iterations x 1000")
 plt.savefig("Project/CSS_Alien/Plots/num_species.png",dpi=300)
 plt.show()
 
 plt.plot(x,biggest_data)
-plt.ylabel("Size of ruling species")
+plt.title("Most common repetitive cluster (partition)")
+plt.ylabel("Number of clusters")
 plt.xlabel("Iterations x 1000")
 plt.savefig("Project/CSS_Alien/Plots/num_ruling.png",dpi=300)
 plt.show()
 
 plt.plot(x,np.array(biggest_data)/np.array(sum_data))
-plt.ylabel("Fraction size largest group of total")
+plt.title("Fraction most common partition")
+plt.ylabel("Fraction")
 plt.xlabel("Iterations x 1000")
 plt.savefig("Project/CSS_Alien/Plots/fraction_species.png",dpi=300)
 plt.show()
