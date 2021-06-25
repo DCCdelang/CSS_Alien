@@ -36,7 +36,7 @@
                 }
             },
             "sensor": {
-                "range": "50"
+                "range": "400"
             },
             "communicator": {
                 "range": "50"

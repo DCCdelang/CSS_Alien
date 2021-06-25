@@ -1,7 +1,7 @@
 {
     "worldSize": {
-        "x": "512",
-        "y": "512"
+        "x": "300",
+        "y": "300"
     },
     "cudaSettings": {
         "dynamicMemorySize": "100000000",
