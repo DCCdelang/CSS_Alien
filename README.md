@@ -78,6 +78,17 @@ An Nvidia graphics card with compute capability 6.0 or higher is needed. Please 
 
 For some graphics cards of the GeForce 10 series there are reported issues that are currently being investigated.
 
+## Presentation
+
+The presentation can be found this directory. If the videos cannot be viewed then a gif of each can be found in the
+directory: [Plots/Additional_Media](Plots/Additional_Media).
+
+They are shown in the following order:
+
+1) swmr.gif
+2) swarm.gif
+3) artificial_life_environment.gif
+
 #### Contributors:
 
 | Name | Student number |
