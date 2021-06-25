@@ -87,7 +87,8 @@ They are shown in the following order:
 
 1) [swmr.gif](Plots/Additional_Media/swmr.gif)
 2) [swarm.gif](Plots/Additional_Media/swarm.gif)
-3) [artificial_life_environment.gif](Plots/Additional_Media/artificial_life_environment.gif)
+3) [replicator.gif](Plots/Additional_Media/replicator.gif)
+4) [artificial_life_environment.gif](Plots/Additional_Media/artificial_life_environment.gif)
 
 #### Contributors:
 
