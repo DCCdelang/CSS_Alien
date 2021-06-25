@@ -16,7 +16,49 @@ In the [Collections](https://github.com/DCCdelang/CSS_Alien/tree/main/Collection
 
 In the above three images snapshots are shown of the setup-OTS-02.sim file with default parameters. The first file is at iteration=0 followed by a snapshot of iter=30k and iter=104k. While the simulation is initialized with only 10 small replicators it is very interesting to see how, in a nutrition rich environment, it is able to fully take over the simulation space. At 30k almost all food is converted and at 104k different clusters are emerging each consisting of different mutation of the original replicator. 
 
-For further data analysis the code can be found in the [Code](https://github.com/DCCdelang/CSS_Alien/tree/main/Code) folder and some plots in the [Plots](https://github.com/DCCdelang/CSS_Alien/tree/main/Plots) folder. This analyses was done using both the general data and the pattern data. 
+For further data analysis the code can be found in the [Code](https://github.com/DCCdelang/CSS_Alien/tree/main/Code) folder and some plots in the [Plots](https://github.com/DCCdelang/CSS_Alien/tree/main/Plots) folder. This analyses was done using both the general data and the pattern data.
+
+#### Custom Clusters
+
+The simulations of the custom clusters can be found in the following directory: [Simulations/Custom](Simulations/Custom).
+
+**Cluster nutrient seeking behaviour**
+
+The objective of this simulation was to understand how the sensor cell type works in combination with the
+propulsion to enable a cluster to seek out nutrients and move towards them.
+
+This can be found in the `seeker.sim` simulation, running the simulation should display the following:
+
+![](Plots/Additional_Media/swmr.gif)
+
+**Cluster swarming behaviour**
+
+By introducing many of the seeker clusters into a simulation with some nutrients, the seekers can exhibit some swarming behavior
+even though they do not communicate with each other.
+
+This can be found in the `swarm.sim` simulation, running the simulation should display the following:
+
+![](Plots/Additional_Media/swarm.gif)
+
+**Cluster replication behaviour**
+
+The purpose of the following simulation was to investigate how cluster replication could be introduced.
+
+This can be found in the `replicator-sim.sim` simulation, running the simulation should display the following:
+
+![](Plots/Additional_Media/replicator.gif)
+
+**Combined seeker and replicator behaviour**
+
+Ultimately the goal was to create a simple cluster that could display both the seeker and replicator behaviour.
+Unfortunately that turned out to be much harder than anticipated, eventually we contacted the author and the
+best we could come up with was a cluster that sort-of combines both behaviour however only gets stuck and only
+exhibits replicator behaviour. When the token is removed from the cluster and a new token is introduced then
+the cluster exhibits the seeker behaviour and not the replicator. I believe it would be possible to iron out
+the bugs and create this cluster however we simply ran out of time.
+
+The simulation can be found in the `rep-travel-combined-sim.sim` for anyone interested in diving more into this
+cluster.
 
 ### How to execute a simulation
 
@@ -38,11 +80,9 @@ For some graphics cards of the GeForce 10 series there are reported issues that 
 
 #### Contributors:
 
-Alicja Grudnowska
-
-Dante de Lang
-
-Mengli Feng
-
-Warwick Louw
-
+| Name | Student number |
+|------|----------------|
+| Alicja Grudnowska | 13060333 |
+| Dante de Lang | 11014083 |
+| Mengli Feng | 13260529 |
+| Warwick Louw | 12594970 |
