@@ -1,6 +1,6 @@
-# CSS_Alien
+# Complex System Simulation - Artificial life
 
-This repository contains data and code used for the final project of the Complex Systems Simulation course of the UvA 2021. The program used for the simulations is the ALiEn-project: https://alien-project.org/index.html
+This repository contains data and code used for the final project of the Complex System Simulation course of the UvA 2021. The program used for the simulations is the ALiEn-project: https://alien-project.org/index.html
 
 ![sim9b-large](Plots/Additional_Media/sim9b-large.png)
 
@@ -18,7 +18,7 @@ In the above three images snapshots are shown of the setup-OTS-02.sim file with 
 
 For further data analysis the code can be found in the [Code](https://github.com/DCCdelang/CSS_Alien/tree/main/Code) folder and some plots in the [Plots](https://github.com/DCCdelang/CSS_Alien/tree/main/Plots) folder. This analyses was done using both the general data and the pattern data.
 
-#### Custom Clusters
+#### **Custom Clusters**
 
 The simulations of the custom clusters can be found in the following directory: [Simulations/Custom](Simulations/Custom).
 
@@ -52,7 +52,7 @@ This can be found in the `replicator-sim.sim` simulation, running the simulation
 
 Ultimately the goal was to create a simple cluster that could display both the seeker and replicator behaviour.
 Unfortunately that turned out to be much harder than anticipated, eventually we contacted the author and the
-best we could come up with was a cluster that sort-of combines both behaviour however only gets stuck and only
+best we could come up with was a cluster that sort-of combines both behaviour however it tends to gets stuck and only
 exhibits replicator behaviour. When the token is removed from the cluster and a new token is introduced then
 the cluster exhibits the seeker behaviour and not the replicator. I believe it would be possible to iron out
 the bugs and create this cluster however we simply ran out of time.
